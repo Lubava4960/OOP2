@@ -2,40 +2,44 @@ package Auto;
 
 import java.util.Objects;
 
-public class Transport {
+public abstract class Transport {
     public String brand;
     public String modeL;
-    private int productionYear;
-    private String originCountry;
-    public String color;
-    public  double speedMax;
+    private double engineVolume;
+    private String name;
+    private int grade;
+
+    public void Driver(String name, int grade) {
+        this.name = name;
+        this.grade = grade;
+
+    }
+
 
     @Override
     public String toString() {
-        return "Авто: " +
-                  brand +
-                ", модель " + modeL +
-                ", год выпуска " + productionYear +
-                ", страна происхождения " + originCountry +
-                ", цвет " + color +
-                ", максимальная скорость " + speedMax +
+        return "Transport{" +
+                "Бренд " + brand + '\'' +
+                ", модель" + modeL + '\'' +
+                ", объём двигателя " + engineVolume +
                 '}';
     }
-
-    public int getProductionYear() {
-        return productionYear;
+    public void startDrive() {
+        System.out.println("{Повернуть ключ в замке зажигания, включить передачу, нажать на газ.}");
     }
 
-    public void setProductionYear(int productionYear) {
-        this.productionYear = productionYear;
+        public void stopDrive(){
+        System.out.println("{Нажать на тормоз, выключить передачу, поставить на ручник, повернуть ключ зажигания.}");
+
+        }
+
+    public double getEngineVolume() {
+        return engineVolume;
     }
 
-    public String getOriginCountry() {
-        return originCountry;
-    }
+    public void setEngineVolume(double engineaVolume) {
 
-    public void setOriginCountry(String originCountry) {
-        this.originCountry = originCountry;
+        this.engineVolume = engineaVolume;
     }
 
     @Override
@@ -43,37 +47,59 @@ public class Transport {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Transport transport = (Transport) o;
-        return productionYear == transport.productionYear && speedMax == transport.speedMax && Objects.equals(brand, transport.brand) && Objects.equals(modeL, transport.modeL) && Objects.equals(originCountry, transport.originCountry) && Objects.equals(color, transport.color);
+        return Double.compare(transport.engineVolume, engineVolume) == 0 && Objects.equals(brand, transport.brand) && Objects.equals(modeL, transport.modeL);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(brand, modeL, productionYear, originCountry, color, speedMax);
+        return Objects.hash(brand, modeL, engineVolume);
     }
 
-    public Transport(String brand, String modeL, int productionYear, String originCountry, String color, double speedMax) {
-        this.brand = brand;
-        this.modeL = modeL;
-        this.productionYear = productionYear;
-        this.originCountry = originCountry;
-        if (color != null && color !="") {
-            this.color =color;
+    public Transport(String brand, String modeL, double engineVolume) {
+        if (brand == null) {
+            this.brand = "default";
         } else {
-            this.color = "белый";
-
-
-           }
-        if (Double.compare(speedMax, 0) == 0) {
-            this.speedMax =240;
+            this.brand = brand;
+        }
+        if (modeL == null) {
+            this.modeL = "default";
         } else {
-            this.speedMax = speedMax;
+            this.modeL = modeL;
+        }
+        if (Double.compare(engineVolume, 0) == 0) {
+            this.engineVolume = 1.5;
+        } else {
+            this.engineVolume = engineVolume;
         }
 
-
-
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getGrade() {
+        return grade;
+    }
+
+    public void setGrade(int grade) {
+        this.grade = grade;
+    }
+
+    public abstract void Driver();
 }
+
+
+
+
+
+
+
+
 
 
 
