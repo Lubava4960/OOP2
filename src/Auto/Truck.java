@@ -15,7 +15,7 @@ public class Truck extends Transport implements Competing {
     }
 
     @Override
-    public void Driver() {
+    public void DriverD() {
         System.out.println("Водитель "+getName()+"  управляет грузовиком"+ brand +" и участвует в заезде ");
     }
 
@@ -31,11 +31,13 @@ public class Truck extends Transport implements Competing {
 
     @Override
     public String[] pitStop() {
+
         return new String[0];
     }
 
     @Override
     public double[] lastTime() {
+
         return new double[0];
     }
 

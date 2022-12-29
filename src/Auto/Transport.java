@@ -24,6 +24,9 @@ public abstract class Transport {
                 ", объём двигателя " + engineVolume +
                 '}';
     }
+
+    public abstract void DriverD();
+
     public void startDrive() {
         System.out.println("{Повернуть ключ в замке зажигания, включить передачу, нажать на газ.}");
     }
