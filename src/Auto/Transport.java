@@ -8,11 +8,29 @@ public abstract class Transport {
     private double engineVolume;
     private String name;
     private int grade;
+    private String  driveLicense;
 
-    public void Driver(String name, int grade) {
-        this.name = name;
-        this.grade = grade;
+    public Transport() {
 
+    }
+
+
+    public void Driver(String name, int grade, String driveLicense) {
+        if (name == null) {
+            this.name = "default";
+        } else {
+            this.name = name;
+        }
+        if (grade == 0) {
+            this.grade = 5;
+        } else {
+            this.grade = grade;
+        }
+        if (driveLicense == null) {
+            this.driveLicense = "default";
+        } else {
+            this.driveLicense = driveLicense;
+        }
     }
 
 
@@ -25,17 +43,21 @@ public abstract class Transport {
                 '}';
     }
 
-    public abstract void DriverD();
+
+    public abstract void DriverD(String name, int grade, String driveLicense);
+
+    public abstract void DriverC(String name, int grade, String driveLicense);
+
+    public abstract void DriverB(String name, int grade, String driveLicense);
 
     public void startDrive() {
-        System.out.println("{Повернуть ключ в замке зажигания, включить передачу, нажать на газ.}");
+        //System.out.println("{Повернуть ключ в замке зажигания, включить передачу, нажать на газ.}");
     }
 
         public void stopDrive(){
-        System.out.println("{Нажать на тормоз, выключить передачу, поставить на ручник, повернуть ключ зажигания.}");
+      //  System.out.println("{Нажать на тормоз, выключить передачу, поставить на ручник, повернуть ключ зажигания.}");
 
         }
-
     public double getEngineVolume() {
         return engineVolume;
     }
@@ -55,6 +77,7 @@ public abstract class Transport {
 
     @Override
     public int hashCode() {
+
         return Objects.hash(brand, modeL, engineVolume);
     }
 
@@ -78,20 +101,24 @@ public abstract class Transport {
     }
 
     public String getName() {
-        return name;
+
+       return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
-    }
+   }
 
     public int getGrade() {
         return grade;
     }
 
     public void setGrade(int grade) {
+
         this.grade = grade;
     }
+
 
     public abstract void Driver();
 }

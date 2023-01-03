@@ -10,24 +10,55 @@ public class Car extends Transport implements Competing {
     public static final double[]CAR_LAST_TIME= new double[]{3.8,2.4,1.9,};
     public static final double[] CAR_MAX_VOLUME = new double[]{180.0, 250.5, 280.02};
 
-    public Car(String brand, String modeL, double getengineVolume) {
-        super(brand, modeL, getengineVolume);
+    public  Car(String brand, String modeL, double engineVolume) {
+
+        super(brand, modeL, engineVolume);
     }
 
     @Override
     public void Driver() {
         System.out.println("Водитель "+getName()+"  управляет автомобилем"+ brand +" и участвует в заезде ");
+
     }
 
 
+    // @Override
+   // public void Driver() {
+     //   System.out.println("Водитель "+getName()+"  управляет автомобилем"+ brand +" и участвует в заезде ");
+   // }
+   // @Override
+   // public void DriverD() {
+
+   // }
+
+    //@Override
+   // public void Driver(String name, int grade) {
+
+   // }
+
+
     @Override
-    public void startDrive() {
+    public void DriverD(String name, int grade, String driveLicense) {
+
+    }
+
+    @Override
+    public void DriverC(String name, int grade, String driveLicense) {
+
+    }
+
+    @Override
+    public void DriverB(String name, int grade, String driveLicense) {
+
+    }
+
+    @Override
+   public void startDrive() {
         System.out.println("Посмотреть в зеркало,повернуть ключ в замке зажигания, включить передачу, нажать на газ.");
 
-    }
-    @Override
+    }@Override
     public void stopDrive(){
-        System.out.println("Включить поворотник, нажать на тормоз, выключить передачу, поставить на ручник, повернуть ключ зажигания");
+       System.out.println("Включить поворотник, нажать на тормоз, выключить передачу, поставить на ручник, повернуть ключ зажигания");
     }
 
     @Override
@@ -73,10 +104,12 @@ public class Car extends Transport implements Competing {
         }
     }
 
+    public void DriverB() {
+    }
 
 
-
-
+    //public void DriverB() {
+   // }
 }
 
 

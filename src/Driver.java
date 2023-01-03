@@ -1,13 +1,24 @@
-import java.util.Objects;
+//import java.util.Objects;
 
-public abstract class Driver {
-    public  String name;
-    public int grade;
+//import static sun.jvm.hotspot.interpreter.Bytecodes.name;
 
-    public Driver(String name, int grade) {
+import Auto.Car;
+import Auto.Transport;
+
+public abstract class Driver<T extends Transport> {
+
+
+    private String name;
+    private int grade;
+    private String driveLicense;
+
+    //public abstract void driverVehicle();
+
+
+
+    public Driver(String name, int grade,String driveLicense) {
         if (name == null) {
-            this.name = "defolt";
-
+            this.name = "default";
         } else {
             this.name = name;
         }
@@ -16,61 +27,60 @@ public abstract class Driver {
         } else {
             this.grade = grade;
         }
+        if (driveLicense == null) {
+            this.driveLicense = "default";
+        } else {
+            this.driveLicense = driveLicense;
+        }
+
     }
 
     @Override
     public String toString() {
-        return "Водитель {" +
-                "ФИО" + name + '\'' +
-                ", Стаж" + grade +
+        String Transport ;
+        return "Водитель{" +
+                "ФИО-" + getName() + '\'' +
+                ", Стаж-" + getGrade() +
+                ", Права - " + getDriveLicense() + '\'' + "и управляет автомобилем "+
                 '}';
     }
-    void drive(T transport) {
-        public void startDrive () {
-            System.out.println(" Проверить закрытие кузова,повернуть ключ в замке зажигания, включить передачу, нажать на газ.");
-        }
 
-        public void stopDrive () {
-            System.out.println("Посмотреть в зеркало заднего вида, включить поворотник, нажать на тормоз, выключить передачу, поставить на ручник, повернуть ключ зажигания.");
-        }
+    public  abstract void startDrive();
+        //    System.out.println(" Проверить закрытие кузова,повернуть ключ в замке зажигания, включить передачу, нажать на газ.");
+    //    }
 
-        public void refuelCar () {
-            System.out.println("Осмотреть кузов, открыть люк, вставить шланг, залить бензин. ");
-        }
+        public abstract void stopDrive();
+    //        System.out.println("Посмотреть в зеркало заднего вида, включить поворотник, нажать на тормоз, выключить передачу, поставить на ручник, повернуть ключ зажигания.");
+    //    }
 
+       public abstract void refuelCar ();
+    //        System.out.println("Осмотреть кузов, открыть люк, вставить шланг, залить бензин. ");
+    //    }
+
+   // }
+
+
+    public String getName() {
+        return name;
     }
 
-    // public String getName() {
-    //     return name;
-    // }
-
-    // public void setName(String name) {
-    //   this.name = name;
-    // }
-
-    // public int getGrade() {
-    //     return grade;
-    // }
-
-    // public void setGrade(int grade) {
-    //    this.grade = grade;
-    //}
-
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Driver driver = (Driver) o;
-        return grade == driver.grade;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(grade);
+    public int getGrade() {
+        return grade;
     }
 
-    public void driver() {
-        System.out.println("Водитель " + name() + " управляет автобусом и будет участвовать в заезде. ");
+    public void setGrade(int grade) {
+        this.grade = grade;
+    }
+
+    public String getDriveLicense() {
+        return driveLicense;
+    }
+
+    public void setDriveLicense(String driveLicense) {
+        this.driveLicense = driveLicense;
     }
 }

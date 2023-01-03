@@ -10,8 +10,24 @@ public class Bus extends Transport implements Competing{
     public static final double[]ALL_LAST_TIME= new double[]{5.8,6.4};
     public static final double[] ALL_MAX_VOLUME = new double[]{180.0, 200.5};
 
-    public Bus(String brand, String modeL, double engineaVolume) {
-        super(brand, modeL, engineaVolume);
+
+    public Bus(String brand, String modeL, double engineVolume) {
+        super(brand, modeL, engineVolume);
+    }
+
+
+    @Override
+    public void DriverD(String name, int grade, String driveLicense) {
+
+    }
+
+    @Override
+    public void DriverC(String name, int grade, String driveLicense) {
+
+    }
+
+    @Override
+    public void DriverB(String name, int grade, String driveLicense) {
 
     }
 
@@ -22,7 +38,7 @@ public class Bus extends Transport implements Competing{
     }
     @Override
     public void stopDrive(){
-        System.out.println("Нажать на тормоз, выключить передачу, поставить на ручник, открыть двери .");
+       System.out.println("Нажать на тормоз, выключить передачу, поставить на ручник, открыть двери .");
     }
 
 
@@ -33,6 +49,7 @@ public class Bus extends Transport implements Competing{
 
     @Override
     public double[] lastTime() {
+
         return ALL_LAST_TIME;
     }
 
@@ -66,11 +83,13 @@ public class Bus extends Transport implements Competing{
         }
     }
 
+
+
     @Override
     public void Driver() {
-
-        System.out.println("Водитель "+getName()+"  управляет автобусом"+ Bus.class +" и участвует в заезде ");
+        System.out.println("Водитель "+getName()+"  управляет автобусом"+ brand +" и участвует в заезде ");
     }
+
 
 
 }

@@ -11,12 +11,30 @@ public class Truck extends Transport implements Competing {
     public static final double[] TRUCK_MAX_VOLUME = new double[]{201.0, 199.1};
 
     public Truck(String brand, String modeL, double engineVolume) {
+
         super(brand, modeL, engineVolume);
     }
 
     @Override
-    public void DriverD() {
-        System.out.println("Водитель "+getName()+"  управляет грузовиком"+ brand +" и участвует в заезде ");
+    public void Driver() {
+
+        System.out.println("Водитель "+getName()+"  управляет грузовиком  "+ brand +" и участвует в заезде ");
+    }
+
+
+    @Override
+    public void DriverD(String name, int grade, String driveLicense) {
+
+    }
+
+    @Override
+    public void DriverC(String name, int grade, String driveLicense) {
+
+    }
+
+    @Override
+    public void DriverB(String name, int grade, String driveLicense) {
+
     }
 
     @Override
@@ -43,6 +61,7 @@ public class Truck extends Transport implements Competing {
 
     @Override
     public double[] maxVolume() {
+
         return new double[0];
     }
 
@@ -70,4 +89,6 @@ public class Truck extends Transport implements Competing {
                 }
         }
     }
+
+
 }
