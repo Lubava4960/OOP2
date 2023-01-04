@@ -1,7 +1,3 @@
-//import java.util.Objects;
-
-//import static sun.jvm.hotspot.interpreter.Bytecodes.name;
-
 import Auto.Car;
 import Auto.Transport;
 
@@ -12,11 +8,7 @@ public abstract class Driver<T extends Transport> {
     private int grade;
     private String driveLicense;
 
-    //public abstract void driverVehicle();
-
-
-
-    public Driver(String name, int grade,String driveLicense) {
+    public Driver(String name, int grade, String driveLicense) {
         if (name == null) {
             this.name = "default";
         } else {
@@ -32,32 +24,31 @@ public abstract class Driver<T extends Transport> {
         } else {
             this.driveLicense = driveLicense;
         }
-
     }
 
-    @Override
+
+
     public String toString() {
-        String Transport ;
+        String Transport;
         return "Водитель{" +
-                "ФИО-" + getName() + '\'' +
-                ", Стаж-" + getGrade() +
-                ", Права - " + getDriveLicense() + '\'' + "и управляет автомобилем "+
+                "ФИО-" + name + '\'' + grade +
+                ", Права - " + driveLicense + '\'' + "и управляет автомобилем " +
                 '}';
     }
 
-    public  abstract void startDrive();
-        //    System.out.println(" Проверить закрытие кузова,повернуть ключ в замке зажигания, включить передачу, нажать на газ.");
+    public abstract void startDrive();
+    //    System.out.println(" Проверить закрытие кузова,повернуть ключ в замке зажигания, включить передачу, нажать на газ.");
     //    }
 
-        public abstract void stopDrive();
+    public abstract void stopDrive();
     //        System.out.println("Посмотреть в зеркало заднего вида, включить поворотник, нажать на тормоз, выключить передачу, поставить на ручник, повернуть ключ зажигания.");
     //    }
 
-       public abstract void refuelCar ();
+    public abstract void refuelCar();
     //        System.out.println("Осмотреть кузов, открыть люк, вставить шланг, залить бензин. ");
     //    }
 
-   // }
+    // }
 
 
     public String getName() {
@@ -83,4 +74,10 @@ public abstract class Driver<T extends Transport> {
     public void setDriveLicense(String driveLicense) {
         this.driveLicense = driveLicense;
     }
+
+
+
+
+   // private void driveLicense() {
+    //}
 }

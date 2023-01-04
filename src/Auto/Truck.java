@@ -23,6 +23,11 @@ public class Truck extends Transport implements Competing {
 
 
     @Override
+    public void Driver(String name, int grade) {
+
+    }
+
+    @Override
     public void DriverD(String name, int grade, String driveLicense) {
 
     }

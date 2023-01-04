@@ -12,9 +12,15 @@ public class Bus extends Transport implements Competing{
 
 
     public Bus(String brand, String modeL, double engineVolume) {
+
         super(brand, modeL, engineVolume);
     }
 
+
+    @Override
+    public void Driver(String name, int grade) {
+
+    }
 
     @Override
     public void DriverD(String name, int grade, String driveLicense) {

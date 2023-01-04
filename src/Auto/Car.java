@@ -6,35 +6,40 @@ public class Car extends Transport implements Competing {
     public static final String DTP_PIT = "Удалить грязь";
 
 
-    public static final String[] CAR_PIT_COMMANDS= new String[]{SPC_PIT,RTP_PIT, DTP_PIT};
-    public static final double[]CAR_LAST_TIME= new double[]{3.8,2.4,1.9,};
+    public static final String[] CAR_PIT_COMMANDS = new String[]{SPC_PIT, RTP_PIT, DTP_PIT};
+    public static final double[] CAR_LAST_TIME = new double[]{3.8, 2.4, 1.9,};
     public static final double[] CAR_MAX_VOLUME = new double[]{180.0, 250.5, 280.02};
 
-    public  Car(String brand, String modeL, double engineVolume) {
+    public Car(String brand, String modeL, double engineVolume) {
 
         super(brand, modeL, engineVolume);
     }
 
     @Override
     public void Driver() {
-        System.out.println("Водитель "+getName()+"  управляет автомобилем"+ brand +" и участвует в заезде ");
+        System.out.println("Водитель " + getName() + "  управляет автомобилем" + brand + " и участвует в заезде ");
 
     }
 
 
     // @Override
-   // public void Driver() {
-     //   System.out.println("Водитель "+getName()+"  управляет автомобилем"+ brand +" и участвует в заезде ");
-   // }
-   // @Override
-   // public void DriverD() {
+    // public void Driver() {
+    //   System.out.println("Водитель "+getName()+"  управляет автомобилем"+ brand +" и участвует в заезде ");
+    // }
+    // @Override
+    // public void DriverD() {
 
-   // }
+    // }
 
-    //@Override
-   // public void Driver(String name, int grade) {
+    @Override
+    public void Driver(String name, int grade, String driveLicense) {
 
-   // }
+    }
+
+    @Override
+    public void Driver(String name, int grade) {
+
+    }
 
 
     @Override
@@ -53,12 +58,14 @@ public class Car extends Transport implements Competing {
     }
 
     @Override
-   public void startDrive() {
+    public void startDrive() {
         System.out.println("Посмотреть в зеркало,повернуть ключ в замке зажигания, включить передачу, нажать на газ.");
 
-    }@Override
-    public void stopDrive(){
-       System.out.println("Включить поворотник, нажать на тормоз, выключить передачу, поставить на ручник, повернуть ключ зажигания");
+    }
+
+    @Override
+    public void stopDrive() {
+        System.out.println("Включить поворотник, нажать на тормоз, выключить передачу, поставить на ручник, повернуть ключ зажигания");
     }
 
     @Override
@@ -78,6 +85,7 @@ public class Car extends Transport implements Competing {
 
         return new double[0];
     }
+
     public void doPitCommands(String pitCommands) {
         System.out.println("осуществляется остановка");
         switch (pitCommands) {
@@ -107,10 +115,8 @@ public class Car extends Transport implements Competing {
     public void DriverB() {
     }
 
-
-    //public void DriverB() {
-   // }
 }
+
 
 
 

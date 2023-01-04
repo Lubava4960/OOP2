@@ -44,6 +44,8 @@ public abstract class Transport {
     }
 
 
+    public abstract void Driver(String name, int grade);
+
     public abstract void DriverD(String name, int grade, String driveLicense);
 
     public abstract void DriverC(String name, int grade, String driveLicense);
