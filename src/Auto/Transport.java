@@ -10,29 +10,6 @@ public abstract class Transport {
     private int grade;
     private String  driveLicense;
 
-    public Transport() {
-
-    }
-
-
-    public void Driver(String name, int grade, String driveLicense) {
-        if (name == null) {
-            this.name = "default";
-        } else {
-            this.name = name;
-        }
-        if (grade == 0) {
-            this.grade = 5;
-        } else {
-            this.grade = grade;
-        }
-        if (driveLicense == null) {
-            this.driveLicense = "default";
-        } else {
-            this.driveLicense = driveLicense;
-        }
-    }
-
 
     @Override
     public String toString() {
@@ -44,13 +21,6 @@ public abstract class Transport {
     }
 
 
-    public abstract void Driver(String name, int grade);
-
-    public abstract void DriverD(String name, int grade, String driveLicense);
-
-    public abstract void DriverC(String name, int grade, String driveLicense);
-
-    public abstract void DriverB(String name, int grade, String driveLicense);
 
     public void startDrive() {
         //System.out.println("{Повернуть ключ в замке зажигания, включить передачу, нажать на газ.}");
@@ -102,24 +72,7 @@ public abstract class Transport {
 
     }
 
-    public String getName() {
 
-       return name;
-    }
-
-    public void setName(String name) {
-
-        this.name = name;
-   }
-
-    public int getGrade() {
-        return grade;
-    }
-
-    public void setGrade(int grade) {
-
-        this.grade = grade;
-    }
 
 
     public abstract void Driver();

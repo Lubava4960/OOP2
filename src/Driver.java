@@ -27,7 +27,6 @@ public abstract class Driver<T extends Transport> {
     }
 
 
-
     public String toString() {
         String Transport;
         return "Водитель{" +
@@ -74,10 +73,8 @@ public abstract class Driver<T extends Transport> {
     public void setDriveLicense(String driveLicense) {
         this.driveLicense = driveLicense;
     }
+    public void drive(T transport){
+        System.out.println("Водитель садится в машину");
+    }
 
-
-
-
-   // private void driveLicense() {
-    //}
 }
