@@ -1,4 +1,5 @@
 import Auto.Bus;
+import Auto.Car;
 import Auto.Competing;
 
 import java.util.Objects;
@@ -29,6 +30,10 @@ public  class DriverD extends Driver <Bus> {
 
     public void refuelCar() {
         System.out.println("Открыть люк, вставить шланг, залить бензин. ");
+    }
+    @Override
+    public void driver(Bus transport){
+        System.out.println("Водитель садится в машину");
     }
 
     //public void driver() {

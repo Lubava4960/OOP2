@@ -27,6 +27,11 @@ public class DriverC  extends Driver <Truck> {
                 ", Права- " + getDriveLicense() + '\'' +
                 '}';
     }
+@Override
+    public void driver(Truck transport){
+        System.out.println("Водитель садится в машину");
+    }
+
 
 
 

@@ -15,11 +15,7 @@ public class Car extends Transport implements Competing {
         super(brand, modeL, engineVolume);
     }
 
-    @Override
-    public void Driver() {
-        System.out.println("Водитель " + getName() + "  управляет автомобилем" + brand + " и участвует в заезде ");
 
-    }
 
 
     // @Override
@@ -31,31 +27,16 @@ public class Car extends Transport implements Competing {
 
     // }
 
-    @Override
-    public void Driver(String name, int grade, String driveLicense) {
+    //@Override
+  //  public void Driver(String name, int grade, String driveLicense) {
 
-    }
-
-    @Override
-    public void Driver(String name, int grade) {
-
-    }
+  //  }
 
 
-    @Override
-    public void DriverD(String name, int grade, String driveLicense) {
 
-    }
 
-    @Override
-    public void DriverC(String name, int grade, String driveLicense) {
 
-    }
 
-    @Override
-    public void DriverB(String name, int grade, String driveLicense) {
-
-    }
 
     @Override
     public void startDrive() {

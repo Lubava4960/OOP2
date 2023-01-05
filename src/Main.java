@@ -1,5 +1,6 @@
 import Auto.Bus;
 import Auto.Car;
+import Auto.Transport;
 import Auto.Truck;
 
 public class Main {
@@ -8,7 +9,7 @@ public class Main {
         System.out.println(granta);
         granta.startDrive();
         granta.stopDrive();
-        granta.Driver();
+       // granta.Driver();
         granta.DriverB();
 
 
@@ -16,42 +17,42 @@ public class Main {
         System.out.println(audi);
         audi.startDrive();
         audi.stopDrive();
-        audi.Driver();
+       // audi.Driver();
         audi.stopDrive();
 
         Car BMW = new Car(" BMW ", " Z8", 3.9);
         BMW.startDrive();
         BMW.stopDrive();
         System.out.println(BMW);
-        BMW.Driver();
-        BMW.Driver();
+       // BMW.Driver();
+      //  BMW.Driver();
 
         Bus mers = new Bus("Mersedes ", " A5", 3.5 );
         System.out.println(mers);
         mers.startDrive();
         mers.stopDrive();
-        mers.Driver();
-        mers.Driver();
+       // mers.Driver();
+       // mers.Driver();
 
         Bus masda = new Bus("Maзда ", " автобус ", 3.8);
         System.out.println(masda);
         masda.startDrive();
         masda.stopDrive();
-        masda.Driver();
-        masda.Driver();
+     //   masda.Driver();
+      //  masda.Driver();
 
         Truck kamaz = new Truck("Камаз", "65115-48 (А5)", 6.7);
         System.out.println(kamaz);
         kamaz.startDrive();
         kamaz.stopDrive();
-        kamaz.Driver();
-        kamaz.Driver();
+       // kamaz.Driver();
+
 
         Truck renault = new Truck("Рено", "Fourgon L4 H3", 2.3) ;
         System.out.println(renault);
         renault.startDrive();
         renault.stopDrive();
-        renault.Driver();
+
 
 
         DriverD maks = new DriverD("Максим Максимович Иванов ",  7,"Права категории D");
@@ -66,7 +67,7 @@ public class Main {
         aleks.startDrive();
         aleks.stopDrive();
         aleks.refuelCar();
-
+        aleks.driver(<Car> Transport>); // Не получаетя
 
 
         DriverC vlad = new DriverC("Владислав Дмитриевич Хвостов", 7, "права категории С");
@@ -74,6 +75,10 @@ public class Main {
         vlad.startDrive();
         vlad.stopDrive();
         vlad.refuelCar();
+        vlad.driver(Truck Trunsport);// Не получактся вызвать метод
+
+    
+       
 
 
 

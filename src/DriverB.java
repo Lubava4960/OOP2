@@ -1,5 +1,6 @@
 import Auto.Car;
 import Auto.Competing;
+import Auto.Truck;
 
 import java.util.Objects;
 
@@ -30,6 +31,10 @@ public class DriverB  extends Driver <Car> {
 
     public void refuelCar() {
         System.out.println("Открыть люк в салоне , вставить шланг, залить бензин. ");
+    }
+    @Override
+    public void driver(Car transport){
+        System.out.println("Водитель садится в машину");
     }
 
     //public void driver()
