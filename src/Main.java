@@ -24,28 +24,25 @@ public class Main {
         BMW.startDrive();
         BMW.stopDrive();
         System.out.println(BMW);
-       // BMW.Driver();
-      //  BMW.Driver();
+
 
         Bus mers = new Bus("Mersedes ", " A5", 3.5 );
         System.out.println(mers);
         mers.startDrive();
         mers.stopDrive();
-       // mers.Driver();
-       // mers.Driver();
+
 
         Bus masda = new Bus("Maзда ", " автобус ", 3.8);
         System.out.println(masda);
         masda.startDrive();
         masda.stopDrive();
-     //   masda.Driver();
-      //  masda.Driver();
+
 
         Truck kamaz = new Truck("Камаз", "65115-48 (А5)", 6.7);
         System.out.println(kamaz);
         kamaz.startDrive();
         kamaz.stopDrive();
-       // kamaz.Driver();
+
 
 
         Truck renault = new Truck("Рено", "Fourgon L4 H3", 2.3) ;
@@ -60,6 +57,7 @@ public class Main {
         maks.startDrive();
         maks.stopDrive();
         maks.refuelCar();
+        maks.driver(masda);
 
 
         DriverB aleks = new DriverB("Александр Алексеевич Петров", 0, "права категории В");
@@ -67,7 +65,8 @@ public class Main {
         aleks.startDrive();
         aleks.stopDrive();
         aleks.refuelCar();
-        aleks.driver(<Car> Transport>); // Не получаетя
+        aleks.driver(BMW); //Урааа!
+
 
 
         DriverC vlad = new DriverC("Владислав Дмитриевич Хвостов", 7, "права категории С");
@@ -75,7 +74,7 @@ public class Main {
         vlad.startDrive();
         vlad.stopDrive();
         vlad.refuelCar();
-        vlad.driver(Truck Trunsport);// Не получактся вызвать метод
+        vlad.driver(kamaz);// Урааа!
 
     
        

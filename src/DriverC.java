@@ -29,19 +29,7 @@ public class DriverC  extends Driver <Truck> {
     }
 @Override
     public void driver(Truck transport){
-        System.out.println("Водитель садится в машину");
+        System.out.println("Водитель - " +getName()+" управляет грузовиком и будет участвовать в заезде");
     }
-
-
-
-
-    //public void driver (){
-
-     //   System.out.println("Водитель " + getName() + " управляет грузовиком и будет участвовать в заезде. ");
-
-
-  //  }
-
-
 
 }

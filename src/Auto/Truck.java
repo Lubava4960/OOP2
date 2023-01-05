@@ -15,21 +15,6 @@ public class Truck extends Transport implements Competing {
         super(brand, modeL, engineVolume);
     }
 
-    //@Override
-   // public void Driver() {
-
-    //    System.out.println("Водитель "+getName()+"  управляет грузовиком  "+ brand +" и участвует в заезде ");
-   // }
-
-
-
-
-
-   // @Override
-   // public void DriverC(String name, int grade, String driveLicense) {
-
-    //}
-
 
 
     @Override

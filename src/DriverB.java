@@ -34,13 +34,10 @@ public class DriverB  extends Driver <Car> {
     }
     @Override
     public void driver(Car transport){
-        System.out.println("Водитель садится в машину");
+        System.out.println("Водитель - "+ getName()+ " управляет автомобилем и будет участвовать в заезде.");
     }
 
-    //public void driver()
-    // {
-    //    System.out.println("Водитель " +name+ " управляет автобусом и будет участвовать в заезде. ");
-    // }
+
 
 
 }

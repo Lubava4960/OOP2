@@ -36,18 +36,13 @@ public abstract class Driver<T extends Transport> {
     }
 
     public abstract void startDrive();
-    //    System.out.println(" Проверить закрытие кузова,повернуть ключ в замке зажигания, включить передачу, нажать на газ.");
-    //    }
+
 
     public abstract void stopDrive();
-    //        System.out.println("Посмотреть в зеркало заднего вида, включить поворотник, нажать на тормоз, выключить передачу, поставить на ручник, повернуть ключ зажигания.");
-    //    }
+
 
     public abstract void refuelCar();
-    //        System.out.println("Осмотреть кузов, открыть люк, вставить шланг, залить бензин. ");
-    //    }
 
-    // }
 
 
     public String getName() {

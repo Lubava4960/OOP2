@@ -76,15 +76,6 @@ public class Bus extends Transport implements Competing{
         }
     }
 
-
-
-   // @Override
-   // public void Driver() {
-    //    System.out.println("Водитель "+getName()+"  управляет автобусом"+ brand +" и участвует в заезде ");
-   // }
-
-
-
 }
 
 
