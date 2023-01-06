@@ -1,6 +1,7 @@
 package Auto;
 
 public class Bus extends Transport implements Competing{
+    private Capasity capasity;
     public static final String SPC_PIT = "Остановиться";
     public static final String RTP_PIT = "Заправиться топливом";
     public static final String ETP_PIT = "Заменить шины";
@@ -11,18 +12,15 @@ public class Bus extends Transport implements Competing{
     public static final double[] ALL_MAX_VOLUME = new double[]{180.0, 200.5};
 
 
-    public Bus(String brand, String modeL, double engineVolume) {
+    public Bus(String brand, String modeL, double engineVolume, Capasity capasity) {
 
         super(brand, modeL, engineVolume);
+        this.capasity = capasity;
     }
 
-   // @Override  @Override
-   // public void DriverD(String name, int grade, String driveLicense) {
-
-
-
-  //  }
-
+    public void setCapasity(Capasity capasity) {
+        this.capasity = capasity;
+    }
 
     @Override
     public void startDrive() {
@@ -33,6 +31,18 @@ public class Bus extends Transport implements Competing{
     public void stopDrive(){
        System.out.println("Нажать на тормоз, выключить передачу, поставить на ручник, открыть двери .");
     }
+
+    @Override
+    public void printType() {
+
+            if (capasity==null){
+                System.out.println("Данных по авто не достаточно");
+            }else {
+                System.out.println("Грузоподъёмность авто: "+ capasity.getFrom()+"до " + capasity.getTo());
+            }
+        }
+
+
 
 
     @Override
@@ -76,7 +86,20 @@ public class Bus extends Transport implements Competing{
         }
     }
 
-}
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,6 +1,7 @@
 package Auto;
 
 public class Car extends Transport implements Competing {
+    private TypeOfBody typeOfBody;
     public static final String SPC_PIT = "Остановиться";
     public static final String RTP_PIT = "Заправиться топливом";
     public static final String DTP_PIT = "Удалить грязь";
@@ -10,33 +11,19 @@ public class Car extends Transport implements Competing {
     public static final double[] CAR_LAST_TIME = new double[]{3.8, 2.4, 1.9,};
     public static final double[] CAR_MAX_VOLUME = new double[]{180.0, 250.5, 280.02};
 
-    public Car(String brand, String modeL, double engineVolume) {
+    public Car(String brand, String modeL, double engineVolume,TypeOfBody typeOfBody) {
 
         super(brand, modeL, engineVolume);
+        this.typeOfBody = typeOfBody;
     }
 
+    public TypeOfBody getTypeOfBody() {
+        return typeOfBody;
+    }
 
-
-
-    // @Override
-    // public void Driver() {
-    //   System.out.println("Водитель "+getName()+"  управляет автомобилем"+ brand +" и участвует в заезде ");
-    // }
-    // @Override
-    // public void DriverD() {
-
-    // }
-
-    //@Override
-  //  public void Driver(String name, int grade, String driveLicense) {
-
-  //  }
-
-
-
-
-
-
+    public void setTypeOfBody(TypeOfBody typeOfBody) {
+        this.typeOfBody = typeOfBody;
+    }
 
     @Override
     public void startDrive() {
@@ -47,6 +34,15 @@ public class Car extends Transport implements Competing {
     @Override
     public void stopDrive() {
         System.out.println("Включить поворотник, нажать на тормоз, выключить передачу, поставить на ручник, повернуть ключ зажигания");
+    }
+
+    @Override
+    public void printType() {
+        if (typeOfBody==null){
+            System.out.println("Данных по авто не достаточно");
+        }else {
+            System.out.println("Тип авто - "+typeOfBody);
+        }
     }
 
     @Override
@@ -94,9 +90,18 @@ public class Car extends Transport implements Competing {
     }
 
     public void DriverB() {
-    }
+   }
+
+
+
+
 
 }
+
+
+
+
+
 
 
 

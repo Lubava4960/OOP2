@@ -1,51 +1,46 @@
-import Auto.Bus;
-import Auto.Car;
-import Auto.Transport;
-import Auto.Truck;
+import Auto.*;
 
 public class Main {
     public static <driverStartB> void main(String[] args) {
-        Car granta = new Car("Лада", "Гранта", 1.7);
+        Car granta = new Car("Лада", "Гранта", 1.7, TypeOfBody.SEDAN);
         System.out.println(granta);
         granta.startDrive();
         granta.stopDrive();
-       // granta.Driver();
         granta.DriverB();
 
 
-        Car audi = new Car(" Audi ", " A8 50 L TDI quattro", 3.5);
+        Car audi = new Car(" Audi ", " A8 50 L TDI quattro", 3.5,TypeOfBody.SEDAN);
         System.out.println(audi);
         audi.startDrive();
         audi.stopDrive();
-       // audi.Driver();
-        audi.stopDrive();
 
-        Car BMW = new Car(" BMW ", " Z8", 3.9);
+
+        Car BMW = new Car(" BMW ", " Z8", 3.9,TypeOfBody.SEDAN);
         BMW.startDrive();
         BMW.stopDrive();
         System.out.println(BMW);
 
 
-        Bus mers = new Bus("Mersedes ", " A5", 3.5 );
+        Bus mers = new Bus("Mersedes ", " A5", 3.5, Capasity.SMALL);
         System.out.println(mers);
         mers.startDrive();
         mers.stopDrive();
 
 
-        Bus masda = new Bus("Maзда ", " автобус ", 3.8);
+        Bus masda = new Bus("Maзда ", " автобус ", 3.8 , Capasity.AVERAGE);
         System.out.println(masda);
         masda.startDrive();
         masda.stopDrive();
 
 
-        Truck kamaz = new Truck("Камаз", "65115-48 (А5)", 6.7);
+        Truck kamaz = new Truck("Камаз", "65115-48 (А5)", 6.7,Weight.N3);
         System.out.println(kamaz);
         kamaz.startDrive();
         kamaz.stopDrive();
 
 
 
-        Truck renault = new Truck("Рено", "Fourgon L4 H3", 2.3) ;
+        Truck renault = new Truck("Рено", "Fourgon L4 H3", 2.3,Weight.N2) ;
         System.out.println(renault);
         renault.startDrive();
         renault.stopDrive();
@@ -76,8 +71,9 @@ public class Main {
         vlad.refuelCar();
         vlad.driver(kamaz);// Урааа!
 
-    
-       
+        masda.printType();
+        mers.printType();
+
 
 
 

@@ -1,6 +1,7 @@
 package Auto;
 
 public class Truck extends Transport implements Competing {
+    private Weight weight;
     public static final String SPC_PIT = "Остановиться";
     public static final String RTP_PIT = "Заправиться топливом";
     public static final String ETP_PIT = "Заменить шины";
@@ -10,12 +11,19 @@ public class Truck extends Transport implements Competing {
     public static final double[] TRUCK_LAST_TIME = new double[]{4.33, 4.10};
     public static final double[] TRUCK_MAX_VOLUME = new double[]{201.0, 199.1};
 
-    public Truck(String brand, String modeL, double engineVolume) {
+    public Truck(String brand, String modeL, double engineVolume,Weight weight) {
 
         super(brand, modeL, engineVolume);
+        this.weight = weight;
     }
 
+    public Weight getWeight() {
+        return weight;
+    }
 
+    public void setWeight(Weight weight) {
+        this.weight = weight;
+    }
 
     @Override
     public void startDrive() {
@@ -26,6 +34,19 @@ public class Truck extends Transport implements Competing {
     public void stopDrive() {
         System.out.println("Посмотреть в зеркало заднего вида, включить поворотник, нажать на тормоз, выключить передачу, поставить на ручник, повернуть ключ зажигания.");
     }
+
+    @Override
+    public void printType() {
+
+            if (weight==null){
+                System.out.println("Данных по авто не достаточно");
+            }else {
+                String from=weight.getFrom()==null?"":"от "+weight.getFrom();
+                String to =weight.getTo()==null?"":"до "+weight.getTo();
+                System.out.println("Грузоподъёмность авто: "+ from+to);
+            }
+        }
+
 
     @Override
     public String[] pitStop() {
@@ -71,4 +92,7 @@ public class Truck extends Transport implements Competing {
     }
 
 
+
+
 }
+
