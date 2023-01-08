@@ -9,10 +9,10 @@ public abstract class Driver<T extends Transport> {
     private String driveLicense;
 
     public Driver(String name, int grade, String driveLicense) {
-        if (name == null) {
-            this.name = "default";
-        } else {
-            this.name = name;
+        if ( driveLicense != null )
+            this.driveLicense = driveLicense;
+        else {
+            throw new IllegalArgumentException("Тип прав не заполнен");
         }
         if (grade == 0) {
             this.grade = 5;
@@ -24,7 +24,13 @@ public abstract class Driver<T extends Transport> {
         } else {
             this.driveLicense = driveLicense;
         }
+
+
+
+
     }
+
+
 
 
     public String toString() {
@@ -69,8 +75,14 @@ public abstract class Driver<T extends Transport> {
         this.driveLicense = driveLicense;
     }
     public  void  driver(T transport){
+
         System.out.println("Водитель садится в машину");
     }
+
+
+
+
+
 
 
 }

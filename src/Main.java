@@ -64,7 +64,7 @@ public class Main {
 
 
 
-        DriverC vlad = new DriverC("Владислав Дмитриевич Хвостов", 7, "права категории С");
+        DriverC vlad = new DriverC("Владислав Дмитриевич Хвостов", 7, "категория прав С");
         System.out.println(vlad);
         vlad.startDrive();
         vlad.stopDrive();

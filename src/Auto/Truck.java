@@ -11,7 +11,7 @@ public class Truck extends Transport implements Competing {
     public static final double[] TRUCK_LAST_TIME = new double[]{4.33, 4.10};
     public static final double[] TRUCK_MAX_VOLUME = new double[]{201.0, 199.1};
 
-    public Truck(String brand, String modeL, double engineVolume,Weight weight) {
+    public Truck(String brand, String modeL, double engineVolume, Weight weight) {
 
         super(brand, modeL, engineVolume);
         this.weight = weight;
@@ -38,14 +38,14 @@ public class Truck extends Transport implements Competing {
     @Override
     public void printType() {
 
-            if (weight==null){
-                System.out.println("Данных по авто не достаточно");
-            }else {
-                String from=weight.getFrom()==null?"":"от "+weight.getFrom();
-                String to =weight.getTo()==null?"":"до "+weight.getTo();
-                System.out.println("Грузоподъёмность авто: "+ from+to);
-            }
+        if (weight == null) {
+            System.out.println("Данных по авто не достаточно");
+        } else {
+            String from = weight.getFrom() == null ? "" : "от " + weight.getFrom();
+            String to = weight.getTo() == null ? "" : "до " + weight.getTo();
+            System.out.println("Грузоподъёмность авто: " + from + to);
         }
+    }
 
 
     @Override
@@ -89,10 +89,8 @@ public class Truck extends Transport implements Competing {
                         }
                 }
         }
+
+
     }
 
-
-
-
 }
-
