@@ -1,10 +1,9 @@
+package Auto;
+
 import Auto.Bus;
-import Auto.Car;
-import Auto.Competing;
+import Auto.Driver;
 
-import java.util.Objects;
-
-public  class DriverD extends Driver <Bus> {
+public  class DriverD extends Driver<Bus> {
 
 
     public DriverD(String name, int grade, String driveLicense) {
@@ -26,10 +25,12 @@ public  class DriverD extends Driver <Bus> {
     }
 
     public void stopDrive() {
+
         System.out.println("Посмотреть в зеркала, включить повороткк, нажать на тормоз");
     }
 
     public void refuelCar() {
+
         System.out.println("Открыть люк, вставить шланг, залить бензин. ");
     }
     @Override

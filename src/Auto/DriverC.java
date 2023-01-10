@@ -1,9 +1,9 @@
-import Auto.Competing;
+package Auto;
+
+import Auto.Driver;
 import Auto.Truck;
 
-import java.util.Objects;
-
-public class DriverC  extends Driver <Truck> {
+public class DriverC  extends Driver<Truck> {
 
     public DriverC(String name, int grade, String driveLicense) {
         super(name, grade, driveLicense);

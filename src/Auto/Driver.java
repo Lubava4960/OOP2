@@ -1,3 +1,5 @@
+package Auto;
+
 import Auto.Car;
 import Auto.Transport;
 
@@ -9,7 +11,11 @@ public abstract class Driver<T extends Transport> {
     private String driveLicense;
 
     public Driver(String name, int grade, String driveLicense) {
-
+         if (name==null){
+             this.name = "defoult";
+         }else{
+             this.name = name;
+         }
 
         if (grade == 0) {
             this.grade = 5;

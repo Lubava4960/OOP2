@@ -1,11 +1,10 @@
+package Auto;
+
 import Auto.Car;
-import Auto.Competing;
-import Auto.Truck;
-
-import java.util.Objects;
+import Auto.Driver;
 
 
-public class DriverB  extends Driver <Car> {
+public class DriverB  extends Driver<Car> {
 
 
     public DriverB(String name, int grade, String driveLicense) {

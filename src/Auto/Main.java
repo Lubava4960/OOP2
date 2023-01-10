@@ -1,3 +1,5 @@
+package Auto;
+
 import Auto.*;
 import org.w3c.dom.ranges.RangeException;
 
@@ -91,12 +93,11 @@ public class Main {
     private static void serviceTransport(Transport transport) {
         try {
             if (!transport.service()) {
-                throw new RuntimeException("Автомобиль " + transport.brand +  " не прошел диагностику");
+                throw new RuntimeException("Автомобиль " + transport.brand + " не прошел диагностику");
             }
-        } catch (RangeException e) {
+        } catch (RuntimeException e) {
             System.out.println(e.getMessage());
         }
 
-
+        }
     }
-}
