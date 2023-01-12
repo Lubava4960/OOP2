@@ -28,12 +28,7 @@ public abstract class Driver<T extends Transport> {
             this.driveLicense = driveLicense;
         }
 
-
-
-
     }
-
-
 
 
     public String toString() {

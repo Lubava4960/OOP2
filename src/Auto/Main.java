@@ -1,11 +1,10 @@
 package Auto;
 
-import Auto.*;
-import org.w3c.dom.ranges.RangeException;
+import java.util.ArrayList;
 
 public class Main {
 
-    public static <driverStartB> void main(String[] args) {
+    public static void main(String[] args) {
         Car granta = new Car("Лада", "Гранта", 1.7, TypeOfBody.SEDAN);
         System.out.println(granta);
         granta.startDrive();
@@ -56,12 +55,12 @@ public class Main {
         maks.refuelCar();
         maks.driver(masda);
 
-        service(
-                granta, audi, bmw,
-                mers, masda,
-                kamaz, renault
+        //service(
+        //       granta, audi, bmw,
+        //        mers, masda,
+         //       kamaz, renault
 
-        );
+        //);
 
 
         DriverB aleks = new DriverB("Александр Алексеевич Петров", 0, "права категории В");
@@ -82,22 +81,42 @@ public class Main {
         masda.printType();
         mers.printType();
 
+
+   // private static void service(Transport... transports) {
+    //    for (Transport transport : transports) {
+    //        serviceTransport(transport);
+    //    }
+   // }
+
+   // private static void serviceTransport(Transport transport) {
+    //    try {
+    //        if (!transport.service()) {
+    //            throw new RuntimeException("Автомобиль " + transport.brand + " не прошел диагностику");
+     //       }
+     //   } catch (RuntimeException e) {
+      //      System.out.println(e.getMessage());
+      //  }
+
+
+
+
+        Mechanic Anatoliy = new Mechanic<Truck>("Анатолий", "Иванов", "Колесотехно","Грузовики");
+        System.out.println(Anatoliy);
+        Mechanic Mishel = new Mechanic<Bus>("Михаил", "Петров", "Колесотехно", "Автобусы");
+        System.out.println(Mishel);
+        Mechanic Pier = new Mechanic<Car>("Пётр", "Кузнецов", "Гражданин сервис", "Легковые");
+        System.out.println(Pier);
+
+        ArrayList<String> mechanic = new ArrayList<>();
+        mechanic.add("Anatoliy");
+        mechanic.add("Mishel");
+        mechanic.add("Pier");
+        System.out.println(mechanic.get(1));
+
+
+
     }
 
-    private static void service(Transport... transports) {
-        for (Transport transport : transports) {
-            serviceTransport(transport);
-        }
-    }
 
-    private static void serviceTransport(Transport transport) {
-        try {
-            if (!transport.service()) {
-                throw new RuntimeException("Автомобиль " + transport.brand + " не прошел диагностику");
-            }
-        } catch (RuntimeException e) {
-            System.out.println(e.getMessage());
-        }
 
-        }
-    }
+}
