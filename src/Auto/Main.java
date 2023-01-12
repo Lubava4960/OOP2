@@ -1,6 +1,7 @@
 package Auto;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
 
@@ -99,24 +100,37 @@ public class Main {
 
 
 
+        //  Mechanic Anatoliy = new Mechanic<Truck>("Анатолий", "Иванов", "Колесотехно","Грузовики");
+     //   System.out.println(Anatoliy);
+       // Mechanic Mishel = new Mechanic<Bus>("Михаил", "Петров", "Колесотехно", "Автобусы");
+      //  System.out.println(Mishel);
+       // Mechanic Pier = new Mechanic<Car>("Пётр", "Кузнецов", "Гражданин сервис", "Легковые");
+       // System.out.println(Pier);
 
-        Mechanic Anatoliy = new Mechanic<Truck>("Анатолий", "Иванов", "Колесотехно","Грузовики");
-        System.out.println(Anatoliy);
-        Mechanic Mishel = new Mechanic<Bus>("Михаил", "Петров", "Колесотехно", "Автобусы");
-        System.out.println(Mishel);
-        Mechanic Pier = new Mechanic<Car>("Пётр", "Кузнецов", "Гражданин сервис", "Легковые");
-        System.out.println(Pier);
+     //   ArrayList<String> mechanic = new ArrayList<>();
+      //  mechanic.add("Anatoliy");
+     //   mechanic.add("Mishel");
+     //   mechanic.add("Pier");
+      //  System.out.println(mechanic.get(1));
 
-        ArrayList<String> mechanic = new ArrayList<>();
-        mechanic.add("Anatoliy");
-        mechanic.add("Mishel");
-        mechanic.add("Pier");
-        System.out.println(mechanic.get(1));
-
+        Map<String, String> HashMap = new HashMap<>();
+        test(new HashMap<>());
 
 
     }
+         public static void test(Map<String,String>map){
+             Object mechanic;
+             map.put("Лада Гранта ", "Пётр Кузнецов");
+             map.put("Ауди ", "Пётр Кузнецов");
+             map.put("БМВ ", "Пётр Кузнецов");
+             map.put("Мукедес", "Михаил Петров");
+             map.put("Мазда", "Михаил Петров");
+             map.put("КАмаз", "Анатолий Иванов");
+             map.put("Рено", "Анатолий Иванов");
 
-
+             System.out.println(map);
+         }
 
 }
+
+
