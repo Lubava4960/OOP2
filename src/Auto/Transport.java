@@ -1,5 +1,6 @@
 package Auto;
 
+import java.util.List;
 import java.util.Objects;
 
 public abstract class Transport {
@@ -75,6 +76,12 @@ public abstract class Transport {
     public abstract void printType();
 
     public abstract boolean service();
+
+
+    public List<Object> getMechanics() {
+        return null;
+    }
+
 
 
 

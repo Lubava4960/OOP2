@@ -39,12 +39,13 @@ public  class Mechanic<T extends Transport > {
         }
 
     public void MaintenanceAuto() {
-        System.out.println("Принять авто  сервис, провести диагнотику двигателя. ");
+        System.out.println(getName()+" из компании "+ getCompany()+" Принимает  авто в сервис, проводит диагнотику двигателя. ");
     }
 
-    public void RepairAuto() {
 
-        System.out.println(" Починить авто. ");
+    public void repairAuto() {
+        System.out.println(getName() +" " + getLastName()+ " " +getCompany() +
+                " чинит  авто "+ getWorkAuto());
     }
     public String getName() {
 
@@ -57,6 +58,7 @@ public  class Mechanic<T extends Transport > {
     }
 
     public String getLastName() {
+
         return LastName;
     }
 
@@ -70,14 +72,19 @@ public  class Mechanic<T extends Transport > {
     }
 
     public void setCompany(String company) {
+
         this.company = company;
     }
 
     public String getWorkAuto() {
+
         return workAuto;
     }
 
     public void setWorkAuto(String workAuto) {
+
         this.workAuto = workAuto;
     }
+
+
 }

@@ -1,5 +1,6 @@
 package Auto;
 
+import java.io.ObjectOutputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -57,11 +58,11 @@ public class Main {
         maks.driver(masda);
 
         //service(
-        //       granta, audi, bmw,
-        //        mers, masda,
-         //       kamaz, renault
+         //      granta, audi, bmw,
+         //      mers, masda,
+          //    kamaz, renault
 
-        //);
+         //);
 
 
         DriverB aleks = new DriverB("Александр Алексеевич Петров", 0, "права категории В");
@@ -83,54 +84,80 @@ public class Main {
         mers.printType();
 
 
-   // private static void service(Transport... transports) {
-    //    for (Transport transport : transports) {
-    //        serviceTransport(transport);
-    //    }
-   // }
+        // private static void service(Transport... transports) {
+         //   for (Transport transport : transports) {
+          //      serviceTransport(transport);
+           // }
+        // }
 
-   // private static void serviceTransport(Transport transport) {
-    //    try {
-    //        if (!transport.service()) {
-    //            throw new RuntimeException("Автомобиль " + transport.brand + " не прошел диагностику");
-     //       }
-     //   } catch (RuntimeException e) {
-      //      System.out.println(e.getMessage());
-      //  }
+        // private static void serviceTransport(Transport transport) {
+          //  try {
+          //      if (!transport.service()) {
+           //         throw new RuntimeException("Автомобиль " + transport.brand + " не прошел диагностику");
+           //    }
+         //  } catch (RuntimeException e) {
+          //    System.out.println(e.getMessage());
+         // }
+
+
+        Mechanic Anatoliy = new Mechanic<Truck>("Анатолий", "Иванов", "Колесотехно", "Грузовики");
+        System.out.println(Anatoliy);
+        Mechanic Mishel = new Mechanic<Bus>("Михаил", "Петров", "Колесотехно", "Автобусы");
+        System.out.println(Mishel);
+        Mechanic Pier = new Mechanic<Car>("Пётр", "Кузнецов", "Гражданин сервис", "Легковые");
+        System.out.println(Pier);
+        Anatoliy.repairAuto();
+        Mishel.repairAuto();
+        Pier.repairAuto();
+        Anatoliy.MaintenanceAuto();
+        Mishel.MaintenanceAuto();
+        Pier.MaintenanceAuto();
 
 
 
-        //  Mechanic Anatoliy = new Mechanic<Truck>("Анатолий", "Иванов", "Колесотехно","Грузовики");
-     //   System.out.println(Anatoliy);
-       // Mechanic Mishel = new Mechanic<Bus>("Михаил", "Петров", "Колесотехно", "Автобусы");
-      //  System.out.println(Mishel);
-       // Mechanic Pier = new Mechanic<Car>("Пётр", "Кузнецов", "Гражданин сервис", "Легковые");
-       // System.out.println(Pier);
-
-     //   ArrayList<String> mechanic = new ArrayList<>();
-      //  mechanic.add("Anatoliy");
-     //   mechanic.add("Mishel");
-     //   mechanic.add("Pier");
-      //  System.out.println(mechanic.get(1));
+        ArrayList<String> mechanic = new ArrayList<>();
+        mechanic.add("Anatoliy");
+        mechanic.add("Mishel");
+        mechanic.add("Pier");
+        System.out.println(mechanic.get(1));
+        for (Transport<?> transport : mechanic) {
+            System.out.println(Transport + "\n водитель:\n" + transport.Driver + "\n механики:\n" + transport.mechanic);
+        }
 
         Map<String, String> HashMap = new HashMap<>();
         test(new HashMap<>());
 
+        //for (Transport<?> mechanic : mechanics) {
+        //   ObjectOutputStream.PutFieltransport.MechanicMap;
+        //   transportMechanicMap.put(mechanic, mechanic.getMechanics());
+        //  }
+        //  transportMechanucMap;
+        // System.out.println(transportMechanucMap);
+        // test(new HashMap<>());
+
+
+        //}
+        test(new HashMap<>());
+
 
     }
-         public static void test(Map<String,String>map){
-             Object mechanic;
-             map.put("Лада Гранта ", "Пётр Кузнецов");
-             map.put("Ауди ", "Пётр Кузнецов");
-             map.put("БМВ ", "Пётр Кузнецов");
-             map.put("Мукедес", "Михаил Петров");
-             map.put("Мазда", "Михаил Петров");
-             map.put("КАмаз", "Анатолий Иванов");
-             map.put("Рено", "Анатолий Иванов");
+    public static void test(Map<String,String>map){
+        Object mechanic;
+        map.put("Лада Гранта ", "Пётр Кузнецов");
+        map.put("Ауди ", "Пётр Кузнецов");
+        map.put("БМВ ", "Пётр Кузнецов");
+        map.put("Мукедес", "Михаил Петров");
+        map.put("Мазда", "Михаил Петров");
+        map.put("КАмаз", "Анатолий Иванов");
+        map.put("Рено", "Анатолий Иванов");
 
-             System.out.println(map);
-         }
+        System.out.println(map);
+    }
 
-}
+
+    }
+
+
+
 
 

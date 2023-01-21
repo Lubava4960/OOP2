@@ -54,6 +54,8 @@ public class Truck extends Transport implements Competing {
     }
 
 
+
+
     @Override
     public String[] pitStop() {
 
@@ -71,6 +73,7 @@ public class Truck extends Transport implements Competing {
 
         return new double[0];
     }
+
 
     public void doPitCommands(String pitCommands) {
         System.out.println("осуществляется остановка");
