@@ -3,6 +3,8 @@ package Auto;
 import Auto.Car;
 import Auto.Transport;
 
+import java.util.Objects;
+
 public abstract class Driver<T extends Transport> {
 
 
@@ -37,6 +39,19 @@ public abstract class Driver<T extends Transport> {
                 "ФИО-" + name + '\'' + grade +
                 ", Права - " + driveLicense + '\'' + "и управляет автомобилем " +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Driver<?> driver = (Driver<?>) o;
+        return grade == driver.grade && Objects.equals(name, driver.name) && Objects.equals(driveLicense, driver.driveLicense);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, grade, driveLicense);
     }
 
     public abstract void startDrive();

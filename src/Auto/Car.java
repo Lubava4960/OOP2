@@ -22,6 +22,7 @@ public class Car extends Transport implements Competing {
     }
 
     public void setTypeOfBody(TypeOfBody typeOfBody) {
+
         this.typeOfBody = typeOfBody;
     }
 

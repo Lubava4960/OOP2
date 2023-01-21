@@ -19,6 +19,7 @@ public enum Weight {
         }
 
         public Double getFrom() {
+
             return from;
         }
 
@@ -27,10 +28,12 @@ public enum Weight {
         }
 
     public void setFrom(Double from) {
-        this.from = from;
+
+            this.from = from;
     }
 
     public void setTo(Double to) {
-        this.to = to;
+
+            this.to = to;
     }
 }

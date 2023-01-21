@@ -1,5 +1,7 @@
 package Auto;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public abstract class Transport {
@@ -9,7 +11,8 @@ public abstract class Transport {
     private String name;
     private int grade;
     private String  driveLicense;
-
+    private final List<Mechanic> mechanics = new ArrayList<>();
+    private final List<Transport> racers= new ArrayList<>();
 
     @Override
     public String toString() {
@@ -31,12 +34,21 @@ public abstract class Transport {
 
         }
     public double getEngineVolume() {
+
         return engineVolume;
     }
 
     public void setEngineVolume(double engineaVolume) {
 
         this.engineVolume = engineaVolume;
+    }
+
+    public void addMechanic(Mechanic mechanic){
+        mechanics.add(mechanic);
+    }
+
+    public List<Transport> getRacers() {
+        return racers;
     }
 
     @Override
@@ -72,10 +84,16 @@ public abstract class Transport {
 
     }
 
+
+
     public abstract void printType();
 
     public abstract boolean service();
 
+
+    public List<Object> getMechanics() {
+        return null;
+    }
 
 
 
