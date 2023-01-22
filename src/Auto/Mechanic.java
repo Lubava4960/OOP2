@@ -1,10 +1,13 @@
 package Auto;
 
+import java.util.List;
+
 public  class Mechanic<T extends Transport > {
     private String name;
     private String LastName;
     private String company;
     private String workAuto;
+
 
     public Mechanic(String name, String lastName, String company, String workAuto) {
         if (name == null) {
@@ -86,5 +89,14 @@ public  class Mechanic<T extends Transport > {
         this.workAuto = workAuto;
     }
 
+
+
+    private void add(Mechanic mechanic) {
+        mechanic.add(mechanic);
+    }
+
+    public List <Mechanic>getMechanics(){
+        return getMechanics();
+}
 
 }

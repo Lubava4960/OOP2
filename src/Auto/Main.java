@@ -1,7 +1,8 @@
 package Auto;
 
 import java.util.*;
-
+import java.util.ArrayList;
+import java.util.PriorityQueue;
 public class Main {
 
     public static void main(String[] args) {
@@ -123,7 +124,6 @@ public class Main {
         Pier.MaintenanceAuto();
 
         granta.addMechanic(Pier);
-        audi.addMechanic(Pier);
         bmw.addMechanic(Pier);
         mers.addMechanic(Mishel);
         masda.addMechanic(Mishel);
@@ -132,18 +132,37 @@ public class Main {
 
         System.out.println(racers);
 
-        // Transport sto = new Transport.STO();
-        // sto.addTransport(Car);
+        //Transport sto = new Transport.STO();
+        //sto.addTransport(Car);
         //sto.addTransport(Bus);
-        // sto.addTransport(Truck);
+        //sto.addTransport(Truck);
         //sto.runTO;
-       printUnigueDrivers();
+
+
+       // Queue<Transport> queue1 = new PriorityQueue<>();
+      //  queue1.offer(granta);
+       // queue1.offer(audi);
+       // queue1.offer(bmw);
+      //  queue1.offer(mers);
+       // queue1.offer(masda);
+      //  queue1.offer(kamaz);
+      //  queue1.offer(renault);
+      //  System.out.print("Priority queue с Comparable: ");
+      //  while (queue1.size() > 0) {
+      //      System.out.print(queue1.remove() + " ");
+      //  }
+      //  System.out.println();
+
+
+
+        printUnigueDrivers();
     }
-    public static void printUnigueDrivers(){
+
+    public static void printUnigueDrivers() {
         DriverB vasiliy = new DriverB(" Vasiliy", 8, " категории В");
         DriverB ivan = new DriverB(" Ivan", 9, " категории В");
         DriverC dmitriy = new DriverC(" Dmitriy", 10, "  категории  С");
-        DriverC mihail = new DriverC( " Mihail", 9, " категории С");
+        DriverC mihail = new DriverC(" Mihail", 9, " категории С");
         DriverC mihail2 = new DriverC(" Mihail", 9, " категории С");
         DriverD kostya = new DriverD(" Kostya", 7, " категории D");
         DriverD kostyan = new DriverD(" Kostyan", 9, " категории D");
@@ -155,19 +174,19 @@ public class Main {
         drivers.add(mihail2);
         drivers.add(kostya);
         drivers.add(kostyan);
-        for(Driver driver:drivers){
+        for (Driver driver : drivers) {
             System.out.println(driver);
         }
-        Iterator<Driver>iterator= drivers.iterator();
-        while (iterator.hasNext()){
+        Iterator<Driver> iterator = drivers.iterator();
+        while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
-
 
     }
 
 
-    public static void test(Map<String,String>map){
+
+    public static void test(Map<String, String> map) {
         Object mechanic;
         map.put("Лада Гранта ", "Пётр Кузнецов");
         map.put("Ауди ", "Пётр Кузнецов");
@@ -179,6 +198,7 @@ public class Main {
 
         System.out.println(map);
     }
+
 
 
 
