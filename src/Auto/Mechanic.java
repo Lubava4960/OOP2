@@ -84,7 +84,7 @@ public  class Mechanic<T extends Transport > {
         return workAuto;
     }
 
-    public void setWorkAuto(String workAuto) {
+    public void set(String workAuto) {
 
         this.workAuto = workAuto;
     }

@@ -119,9 +119,9 @@ public class Main {
         Anatoliy.repairAuto();
         Mishel.repairAuto();
         Pier.repairAuto();
-        Anatoliy.MaintenanceAuto();
-        Mishel.MaintenanceAuto();
-        Pier.MaintenanceAuto();
+        //Anatoliy.MaintenanceAuto();
+       // Mishel.MaintenanceAuto();
+       // Pier.MaintenanceAuto();
 
         granta.addMechanic(Pier);
         bmw.addMechanic(Pier);
@@ -136,22 +136,22 @@ public class Main {
         //sto.addTransport(Car);
         //sto.addTransport(Bus);
         //sto.addTransport(Truck);
-        //sto.runTO;
+       // sto.runTO;
 
 
-       // Queue<Transport> queue1 = new PriorityQueue<>();
-      //  queue1.offer(granta);
-       // queue1.offer(audi);
-       // queue1.offer(bmw);
-      //  queue1.offer(mers);
-       // queue1.offer(masda);
-      //  queue1.offer(kamaz);
-      //  queue1.offer(renault);
-      //  System.out.print("Priority queue с Comparable: ");
-      //  while (queue1.size() > 0) {
-      //      System.out.print(queue1.remove() + " ");
-      //  }
-      //  System.out.println();
+        Queue<Transport> queue1 = new PriorityQueue<>();
+        queue1.offer(granta);
+        queue1.offer(audi);
+        queue1.offer(bmw);
+        queue1.offer(mers);
+        queue1.offer(masda);
+        queue1.offer(kamaz);
+        queue1.offer(renault);
+        System.out.print("Priority queue с Comparable: ");
+        while (queue1.size() > 0) {
+            System.out.print(queue1.remove() + " ");
+        }
+        System.out.println();
 
 
 
